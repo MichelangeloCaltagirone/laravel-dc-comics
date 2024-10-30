@@ -6,13 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->text("description");
+            $table->text("image_url");
+            $table->float("price");
+            $table->string("series");
+            $table->date("sale_date");
+            $table->string("type");
             $table->timestamps();
         });
     }
