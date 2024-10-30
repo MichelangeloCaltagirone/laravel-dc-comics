@@ -43,11 +43,10 @@
             <input type="text" class="form-control" id="comic-type" name="type">
         </div>
 
-        <button class="btn btn-lg btn-succes" type="submit">Invia</button>
+        <button class="btn btn-lg btn-success" type="submit">Invia</button>
         <button class="btn btn-lg btn-warning" type="reset">Svuota campi</button>
 
     </form>
-
 
 </div>
 
