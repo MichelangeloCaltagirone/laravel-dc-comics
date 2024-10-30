@@ -18,6 +18,16 @@ class ComicController extends Controller
     }
 
     /**
+    * Display the specified resource.
+    */
+    public function show(string $id)
+    {
+        $comic = Comic::findOrFail($id);
+
+        return view("comics.show", compact("comic"));
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -29,14 +39,6 @@ class ComicController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Comic $comic)
     {
         //
     }
