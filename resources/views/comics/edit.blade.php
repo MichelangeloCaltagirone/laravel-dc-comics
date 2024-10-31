@@ -1,16 +1,18 @@
 @extends("layouts.app")
 
-@section("page-title", "Create New Comic")
+@section("page-title", "Edit Comic")
 
 @section("main-content")
 
 <div class="container">
 
-    <form class="card col-8 px-3 m-auto" action="{{ route("comics.store") }}" method="POST">
-    @csrf
+    <form class="card col-8 px-3 m-auto" action="{{ route("comics.update", $comic->id) }}" method="POST">
+        @method("PUT")
+        @csrf
+
         <div class="my-1">
             <label for="comic-name" class="form-label ps-2">Name:</label>
-            <input type="text" class="form-control" id="comic-name" name="name">
+            <input type="text" class="form-control" id="comic-name" name="name" value="">
         </div>
 
         <div class="my-1">
@@ -51,5 +53,6 @@
     </form>
 
 </div>
+
 
 @endsection

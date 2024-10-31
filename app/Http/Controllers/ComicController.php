@@ -59,9 +59,11 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Comic $comic)
+    public function edit(string $id)
     {
-        //
+        $comic = Comic::findOrFail();
+
+        return view("comics.edit", compact("comic"));
     }
 
     /**
