@@ -36,3 +36,6 @@ Route::post("/comics", [ComicController::class, "store"])->name("comics.store");
 //Edit del UPDATE delle crUd
 Route::get('/comics/{id}/edit', [ComicController::class, "edit"])->name("comics.edit");
 
+//Destroy di DELETE delle cruD
+Route::delete('/comics/{id}', [ComicController::class, "destroy"])->name("comics.delete");
+
