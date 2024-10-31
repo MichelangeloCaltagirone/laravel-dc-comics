@@ -21,6 +21,9 @@ Route::get('/', function () {
 // READ delle cRud
 Route::get('/comics', [ComicController::class, "index"])->name("comics.index");
 
+//UPDATE dlle crUd
+Route::put('/comics', [ComicController::class, "update"])->name("comics.update");
+
 //Create delle Crud
 Route::get('/comics/create', [ComicController::class, "create"])->name("comics.create");
 
@@ -31,5 +34,5 @@ Route::get('/comics/{id}', [ComicController::class, "show"])->name("comics.show"
 Route::post("/comics", [ComicController::class, "store"])->name("comics.store");
 
 //Edit del UPDATE delle crUd
-Route::get('/comics/edit/{id}', [ComicController::class, "edit"])->name("comics.edit");
+Route::get('/comics/{id}/edit', [ComicController::class, "edit"])->name("comics.edit");
 
