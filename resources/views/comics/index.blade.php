@@ -23,6 +23,15 @@
             <span class="d-block">Type: {{ $comic->type }}</span>
             <a href="/comics/{{$comic->id}}" class="btn btn-sm btn-primary mt-2">Vedi dettagli</a>
             <a href="/comics/{{$comic->id}}/edit" class="btn btn-sm btn-success mt-2">Modifica</a>
+            <form action="{{ route("comics.delete", $comic->id) }}" method="POST" class="d-inline">
+                @method("DELETE")
+                @csrf
+
+                <button type="submit" class="btn btn-sm btn-warning mt-2">
+                    Elimina
+                </button>
+
+            </form>
             </div>
         </div>
 
