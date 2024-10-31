@@ -21,7 +21,8 @@
             <span class="d-block">Series: {{ $comic->series }}</span>
             <span class="d-block">Sale date: {{ $comic->sale_date }}</span>
             <span class="d-block">Type: {{ $comic->type }}</span>
-            <a class="m-auto" href="/comics/{{$comic->id}}" class="btn btn-primary">Vedi dettagli</a>
+            <a href="/comics/{{$comic->id}}" class="btn btn-sm btn-primary mt-2">Vedi dettagli</a>
+            <a href="/comics/{{$comic->id}}/edit" class="btn btn-sm btn-success mt-2">Modifica</a>
             </div>
         </div>
 

@@ -10,7 +10,7 @@
 
     <div class="d-flex flex-wrap justify-content-between">
 
-        <div class="card my-2" style="width: 18rem;">
+        <div class="card my-2 col-10 mx-auto">
             <img class="card-img-top" src="{{ $comic->image_url }}" alt="{{ $comic->name }}">
             <div class="card-body">
             <h5 class="card-title">Titolo:<br> {{ $comic->name }}</h5>
@@ -19,7 +19,7 @@
             <span class="d-block">Series: {{ $comic->series }}</span>
             <span class="d-block">Sale date: {{ $comic->sale_date }}</span>
             <span class="d-block">Type: {{ $comic->type }}</span>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="/comics/{{$comic->id}}/edit" class="btn btn-sm btn-success mt-2">Modifica</a>
             </div>
         </div>
 
