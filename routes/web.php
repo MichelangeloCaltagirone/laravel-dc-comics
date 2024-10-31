@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/comics', [ComicController::class, "index"])->name("comics.index");
 
 //UPDATE dlle crUd
-Route::put('/comics', [ComicController::class, "update"])->name("comics.update");
+Route::put('/comics/{id}', [ComicController::class, "update"])->name("comics.update");
 
 //Create delle Crud
 Route::get('/comics/create', [ComicController::class, "create"])->name("comics.create");
