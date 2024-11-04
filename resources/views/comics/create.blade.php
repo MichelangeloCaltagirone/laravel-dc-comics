@@ -20,37 +20,37 @@
     @csrf
         <div class="my-1">
             <label for="comic-name" class="form-label ps-2">Name:</label>
-            <input type="text" class="form-control" id="comic-name" name="name">
+            <input type="text" class="form-control" id="comic-name" name="name" value="{{ old('name') }}">
         </div>
 
         <div class="my-1">
             <label for="comic-description" class="form-label ps-2">Description:</label>
-            <input type="text" class="form-control" id="comic-description" name="description">
+            <input type="text" class="form-control" id="comic-description" name="description" value="{{ old('description') }}">
         </div>
 
         <div class="my-1">
             <label for="comic-image" class="form-label ps-2">Image Url:</label>
-            <input type="text" class="form-control" id="comic-image" name="image_url">
+            <input type="text" class="form-control" id="comic-image" name="image_url" value="{{ old('image_url') }}">
         </div>
 
         <div class="my-1">
             <label for="comic-price" class="form-label ps-2">Price:</label>
-            <input type="text" class="form-control" id="comic-price" name="price">
+            <input type="text" class="form-control" id="comic-price" name="price" value="{{ old('price') }}">
         </div>
 
         <div class="my-1">
             <label for="comic-series" class="form-label ps-2">Series:</label>
-            <input type="text" class="form-control" id="comic-series" name="series">
+            <input type="text" class="form-control" id="comic-series" name="series" value="{{ old('series') }}">
         </div>
 
         <div class="my-1">
             <label for="comic-sale_date" class="form-label ps-2">Sale date:</label>
-            <input type="text" class="form-control" id="comic-sale_date" name="sale_date">
+            <input type="text" class="form-control" id="comic-sale_date" name="sale_date" value="{{ old('sale_date') }}">
         </div>
 
         <div class="my-1">
             <label for="comic-type" class="form-label ps-2">Type:</label>
-            <input type="text" class="form-control" id="comic-type" name="type">
+            <input type="text" class="form-control" id="comic-type" name="type" value="{{ old('type') }}">
         </div>
 
         <div class="my-1 d-flex justify-content-around">
