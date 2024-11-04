@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreComicsRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -38,17 +39,17 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicsRequest $request)
     {
-        $request->validate([
-            "name" => "required|string|min:2|max:255",
-            "description" => "required|string|min:2",
-            "image_url" => "required|url",
-            "price" => "required|numeric",
-            "series" => "required|string|min:2|max:255",
-            "sale_date" => "required|date",
-            "type" => "required|string|min:2|max:255",
-        ]);
+        $request->validate();
+        //     "name" => "required|string|min:2|max:255",
+        //     "description" => "required|string|min:2",
+        //     "image_url" => "required|url",
+        //     "price" => "required|numeric",
+        //     "series" => "required|string|min:2|max:255",
+        //     "sale_date" => "required|date",
+        //     "type" => "required|string|min:2|max:255",
+        // ]);
 
         $comicData = $request->all();
 
