@@ -6,6 +6,16 @@
 
 <div class="container">
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form class="card col-8 px-3 m-auto" action="{{ route("comics.store") }}" method="POST">
     @csrf
         <div class="my-1">
