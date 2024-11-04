@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreComicsRequest;
+use App\Http\Requests\UpdateComicsRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -80,7 +81,7 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateComicsRequest $request, string $id)
     {
         $request->validate([
             "name" => "required|string|min:2|max:255",

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EditComicsRequest extends FormRequest
+class UpdateComicsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
